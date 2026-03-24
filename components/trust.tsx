@@ -71,7 +71,7 @@ export function Trust() {
               </blockquote>
 
               <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>

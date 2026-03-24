@@ -36,10 +36,6 @@ const addOns = [
 export function Services() {
   return (
     <section className="py-14 md:py-20 px-6 relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-secondary/30 to-transparent" />
-      </div>
 
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">

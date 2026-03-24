@@ -16,7 +16,6 @@ const plans = [
       "Email support",
     ],
     popular: false,
-    gradient: "from-tertiary/20 to-tertiary/5",
     accent: "tertiary",
   },
   {
@@ -33,7 +32,6 @@ const plans = [
       "Post-storm assessments",
     ],
     popular: true,
-    gradient: "from-primary/20 to-accent/10",
     accent: "primary",
   },
   {
@@ -50,7 +48,6 @@ const plans = [
       "Home improvement consulting",
     ],
     popular: false,
-    gradient: "from-accent/20 to-accent/5",
     accent: "accent",
   },
 ]
@@ -61,7 +58,7 @@ export function Pricing() {
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            Straightforward <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">pricing.</span>
+            Straightforward pricing.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Plans designed for Lubbock homeowners. No surprises.
@@ -72,17 +69,14 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 flex flex-col ${
+              className={`group relative p-8 rounded-3xl border transition-all duration-300 hover:-translate-y-1 flex flex-col ${
                 plan.popular
-                  ? "border-primary bg-gradient-to-b from-primary/10 to-card shadow-2xl shadow-primary/20 scale-105 md:scale-110"
-                  : "border-border bg-card hover:border-primary/30 hover:shadow-xl"
+                  ? "border-primary bg-primary/5 shadow-xl shadow-primary/10 scale-105 md:scale-110"
+                  : "border-border bg-card hover:border-primary/30 hover:shadow-lg"
               }`}
             >
-              {/* Gradient overlay */}
-              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-b ${plan.gradient} opacity-50`} />
-
               {plan.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-gradient-to-r from-primary to-accent text-white text-sm font-bold rounded-full flex items-center gap-2 shadow-xl">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-primary text-white text-sm font-bold rounded-full flex items-center gap-2 shadow-lg">
                   <Sparkles className="h-4 w-4" />
                   Most Popular
                 </span>
@@ -91,7 +85,7 @@ export function Pricing() {
               <div className="relative flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
-                  <span className={`text-5xl font-bold ${plan.popular ? "bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" : "text-foreground"}`}>
+                  <span className={`text-5xl font-bold ${plan.popular ? "text-primary" : "text-foreground"}`}>
                     {plan.price}
                   </span>
                   <span className="text-muted-foreground">{plan.period}</span>

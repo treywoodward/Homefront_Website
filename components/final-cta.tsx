@@ -5,7 +5,7 @@ import { ArrowRight, MapPin } from "lucide-react"
 
 export function FinalCTA() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-gradient-to-br from-foreground via-foreground to-foreground/95 text-background relative overflow-hidden">
+    <section className="py-20 md:py-28 px-6 bg-foreground text-background relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-10 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float-slow" />
@@ -28,7 +28,7 @@ export function FinalCTA() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
           Your home should run smoothly.
           <br />
-          <span className="bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text text-transparent">We make sure it does.</span>
+          <span className="text-accent">We make sure it does.</span>
         </h2>
 
         <p className="mt-6 text-lg text-background/70 max-w-xl mx-auto">

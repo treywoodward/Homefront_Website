@@ -38,7 +38,7 @@ export function Solution() {
 
       <div className="relative mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center text-balance">
-          Homefront handles it—<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">before</span> it becomes a problem.
+          Homefront handles it—<span className="text-primary">before</span> it becomes a problem.
         </h2>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -47,8 +47,6 @@ export function Solution() {
               key={index}
               className="group relative text-center p-8 rounded-3xl bg-card border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full"
             >
-              {/* Gradient border on hover */}
-              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${pillar.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
               <div className={`relative mx-auto w-16 h-16 rounded-2xl ${pillar.iconBg} flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300`}>
                 <pillar.icon className="h-8 w-8 text-white" />

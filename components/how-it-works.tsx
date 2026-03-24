@@ -36,16 +36,9 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-14 md:py-20 px-6 bg-secondary/20 relative overflow-hidden">
-      {/* Connection line SVG */}
-      <svg className="absolute top-1/2 left-0 right-0 h-1 hidden lg:block pointer-events-none" style={{ top: '55%' }}>
-        <line x1="15%" y1="0" x2="85%" y2="0" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="8,8" className="animate-draw-line" />
-        <defs>
-          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="var(--accent)" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="var(--tertiary)" stopOpacity="0.3" />
-          </linearGradient>
-        </defs>
+      {/* Connection line */}
+      <svg className="absolute left-0 right-0 h-px hidden lg:block pointer-events-none" style={{ top: '55%' }}>
+        <line x1="15%" y1="0" x2="85%" y2="0" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="6,6" />
       </svg>
 
       {/* Dot grid */}
@@ -54,7 +47,7 @@ export function HowItWorks() {
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            Simple. Predictable. <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Done.</span>
+            Simple. Predictable. <span className="text-primary">Done.</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Getting started is easy. Staying protected is even easier.
@@ -75,7 +68,7 @@ export function HowItWorks() {
               {/* Card */}
               <div className="pt-8 pb-6 px-6 rounded-3xl bg-card border border-border group-hover:border-primary/30 group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 flex flex-col h-full">
                 {/* Icon */}
-                <div className={`mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-${step.color} to-${step.color}/80 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                <div className={`mx-auto w-16 h-16 rounded-2xl bg-${step.color} flex items-center justify-center shadow-sm group-hover:scale-110 transition-all duration-300`}>
                   <step.icon className="h-8 w-8 text-white" />
                 </div>
 
