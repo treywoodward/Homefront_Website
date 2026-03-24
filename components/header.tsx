@@ -17,7 +17,7 @@ export function Header() {
           </Link>
           <span className="hidden sm:flex items-center gap-1 px-2 py-1 rounded-full bg-primary/10 text-xs font-medium text-primary">
             <MapPin className="h-3 w-3" />
-            West Texas
+            Lubbock
           </span>
         </div>
 

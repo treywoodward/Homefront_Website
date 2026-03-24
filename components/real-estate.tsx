@@ -6,7 +6,7 @@ const benefits = [
   { 
     icon: TrendingUp, 
     title: "Maintain Property Value",
-    description: "Regular maintenance protects your investment from harsh West Texas conditions.",
+    description: "Regular maintenance protects your investment from harsh Lubbock conditions.",
     color: "primary",
   },
   { 

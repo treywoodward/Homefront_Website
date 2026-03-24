@@ -23,7 +23,7 @@ export function FinalCTA() {
       <div className="relative mx-auto max-w-3xl text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 border border-background/20 mb-8">
           <MapPin className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-background/80">Serving Midland, Odessa & the Permian Basin</span>
+          <span className="text-sm font-medium text-background/80">Serving Lubbock & the High Plains</span>
         </div>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
@@ -33,7 +33,7 @@ export function FinalCTA() {
         </h2>
 
         <p className="mt-6 text-lg text-background/70 max-w-xl mx-auto">
-          Join hundreds of West Texas homeowners who&apos;ve stopped worrying about maintenance and started enjoying their homes.
+          Join hundreds of Lubbock homeowners who&apos;ve stopped worrying about maintenance and started enjoying their homes.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -69,7 +69,7 @@ export function Pricing() {
             Straightforward <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">pricing.</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Plans designed for West Texas homeowners. No surprises.
+            Plans designed for Lubbock homeowners. No surprises.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-12 text-center text-muted-foreground">
-          All plans include coverage for homes in <span className="text-primary font-medium">Midland</span>, <span className="text-accent font-medium">Odessa</span>, and the greater <span className="text-tertiary font-medium">Permian Basin</span>.
+          All plans include coverage for homes in <span className="text-primary font-medium">Lubbock</span> and the greater <span className="text-tertiary font-medium">High Plains</span>.
         </p>
       </div>
     </section>

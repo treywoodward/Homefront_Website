@@ -6,7 +6,7 @@ const pillars = [
   {
     icon: Eye,
     title: "Proactive",
-    description: "We regularly inspect and monitor your home—catching issues before the West Texas elements make them worse.",
+    description: "We regularly inspect and monitor your home—catching issues before the Lubbock elements make them worse.",
     gradient: "from-primary to-primary/80",
     iconBg: "bg-primary",
   },
@@ -20,7 +20,7 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: "Reliable",
-    description: "Our vetted network of local Permian Basin professionals. Consistent quality. No guesswork.",
+    description: "Our vetted network of local High Plains professionals. Consistent quality. No guesswork.",
     gradient: "from-tertiary to-tertiary/80",
     iconBg: "bg-tertiary",
   },

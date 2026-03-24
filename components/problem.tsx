@@ -46,10 +46,10 @@ export function Problem() {
     <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-background via-secondary/30 to-background">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center text-balance">
-          Homeownership in <span className="text-primary">West Texas</span> is different.
+          Homeownership in <span className="text-primary">Lubbock</span> is different.
         </h2>
         <p className="mt-4 text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-          The Permian Basin climate is tough on homes. You shouldn&apos;t have to fight it alone.
+          The High Plains climate is tough on homes. You shouldn&apos;t have to fight it alone.
         </p>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -3,7 +3,7 @@
 import { UserCheck, ClipboardList, MessageSquare, BadgeCheck, Star } from "lucide-react"
 
 const trustPoints = [
-  { icon: UserCheck, text: "Vetted local West Texas professionals", color: "text-primary", bg: "bg-primary/10" },
+  { icon: UserCheck, text: "Vetted local Lubbock professionals", color: "text-primary", bg: "bg-primary/10" },
   { icon: ClipboardList, text: "Climate-specific inspection process", color: "text-accent", bg: "bg-accent/10" },
   { icon: MessageSquare, text: "Transparent communication always", color: "text-tertiary", bg: "bg-tertiary/10" },
   { icon: BadgeCheck, text: "No upselling, no hidden fees", color: "text-primary", bg: "bg-primary/10" },
@@ -13,13 +13,13 @@ const testimonials = [
   {
     quote: "Between work in the oil field and family, I had zero time for home stuff. Homefront handles everything—even coordinated repairs after that bad dust storm last spring.",
     name: "Marcus T.",
-    location: "Midland",
+    location: "Lubbock",
     rating: 5,
   },
   {
     quote: "Our AC died in July. Homefront had someone there same day. They understand what living out here means.",
     name: "Jennifer & David K.",
-    location: "Odessa",
+    location: "Lubbock",
     rating: 5,
   },
 ]

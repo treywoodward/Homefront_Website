@@ -14,7 +14,7 @@ const steps = [
     number: "02",
     icon: Search,
     title: "We Inspect & Track",
-    description: "We build a full picture of your home and stay ahead of West Texas wear.",
+    description: "We build a full picture of your home and stay ahead of Lubbock wear.",
     color: "accent",
   },
   {

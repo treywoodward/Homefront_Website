@@ -22,7 +22,7 @@ export function WhoItsFor() {
       <div className="relative mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-            Built for <span className="bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text text-transparent animate-gradient">West Texas</span> homeowners.
+            Built for <span className="bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text text-transparent animate-gradient">Lubbock</span> homeowners.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
             Whether you&apos;re working the fields or running a business, your home shouldn&apos;t be another job.

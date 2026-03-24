@@ -12,12 +12,12 @@ export function Footer() {
               Homefront
             </Link>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              Private home management for West Texas homeowners. Serving Midland, Odessa, and the greater Permian Basin.
+              Private home management for Lubbock homeowners. Serving Lubbock and the greater High Plains.
             </p>
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Midland-Odessa, TX</span>
+                <span>Lubbock, TX</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-accent" />
@@ -68,7 +68,7 @@ export function Footer() {
             © {new Date().getFullYear()} Homefront. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Made with care in <span className="text-primary font-medium">West Texas</span>
+            Made with care in <span className="text-primary font-medium">Lubbock</span>
           </p>
         </div>
       </div>

@@ -23,7 +23,7 @@ const mainServices = [
   { icon: FileText, text: "Digital home history + records", color: "text-accent", bg: "bg-accent/10" },
   { icon: Users, text: "Local vendor coordination", color: "text-tertiary", bg: "bg-tertiary/10" },
   { icon: Calendar, text: "Priority scheduling", color: "text-primary", bg: "bg-primary/10" },
-  { icon: MapPin, text: "Trusted Permian Basin network", color: "text-accent", bg: "bg-accent/10" },
+  { icon: MapPin, text: "Trusted High Plains network", color: "text-accent", bg: "bg-accent/10" },
   { icon: Droplets, text: "Water system monitoring", color: "text-tertiary", bg: "bg-tertiary/10" },
 ]
 
@@ -44,10 +44,10 @@ export function Services() {
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-            Everything your <span className="text-primary">West Texas</span> home needs.
+            Everything your <span className="text-primary">Lubbock</span> home needs.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Services designed specifically for the unique challenges of Permian Basin homeownership.
+            Services designed specifically for the unique challenges of High Plains homeownership.
           </p>
         </div>
 

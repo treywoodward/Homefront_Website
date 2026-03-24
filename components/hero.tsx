@@ -27,7 +27,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
-          <span className="text-sm font-medium text-foreground">Now serving Midland, Odessa & the Permian Basin</span>
+          <span className="text-sm font-medium text-foreground">Now serving Lubbock & the High Plains</span>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] text-balance animate-fade-in-up delay-100">
@@ -37,7 +37,7 @@ export function Hero() {
         </h1>
         
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty animate-fade-in-up delay-200">
-          Homefront is a subscription-based home management service built for West Texas homeowners. We handle the dust storms, the heat, and the maintenance—so your home stays in peak condition.
+          Homefront is a subscription-based home management service built for Lubbock homeowners. We handle the dust storms, the heat, and the maintenance—so your home stays in peak condition.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
