@@ -5,13 +5,12 @@ import { ArrowRight, MapPin } from "lucide-react"
 
 export function FinalCTA() {
   return (
-    <section className="py-24 md:py-40 px-6 bg-gradient-to-br from-foreground via-foreground to-foreground/95 text-background relative overflow-hidden">
+    <section className="py-20 md:py-28 px-6 bg-gradient-to-br from-foreground via-foreground to-foreground/95 text-background relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-10 left-10 w-80 h-80 bg-primary/35 rounded-full blur-3xl animate-float-slow animate-blob-morph" />
-        <div className="absolute bottom-10 right-10 w-64 h-64 bg-accent/35 rounded-full blur-3xl animate-float delay-300" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-tertiary/20 rounded-full blur-3xl animate-scale-pulse" />
-        <div className="absolute bottom-20 left-1/4 w-48 h-48 bg-primary/25 rounded-full blur-2xl animate-glow-pulse delay-200" />
+        <div className="absolute top-10 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-10 right-10 w-56 h-56 bg-accent/20 rounded-full blur-3xl animate-float delay-300" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       </div>
 
       {/* Grid pattern overlay */}
@@ -37,9 +36,9 @@ export function FinalCTA() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button 
-            size="lg" 
-            className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white px-10 py-7 text-lg font-semibold shadow-2xl shadow-primary/40 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+          <Button
+            size="lg"
+            className="group bg-primary hover:bg-primary/90 text-white px-10 py-7 text-lg font-semibold shadow-2xl shadow-primary/40 hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
           >
             Start Your Homefront Plan
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

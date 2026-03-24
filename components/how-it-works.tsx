@@ -35,7 +35,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 md:py-32 px-6 bg-gradient-to-b from-secondary via-secondary/80 to-background relative overflow-hidden">
+    <section id="how-it-works" className="py-14 md:py-20 px-6 bg-secondary/20 relative overflow-hidden">
       {/* Connection line SVG */}
       <svg className="absolute top-1/2 left-0 right-0 h-1 hidden lg:block pointer-events-none" style={{ top: '55%' }}>
         <line x1="15%" y1="0" x2="85%" y2="0" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="8,8" className="animate-draw-line" />
@@ -48,6 +48,9 @@ export function HowItWorks() {
         </defs>
       </svg>
 
+      {/* Dot grid */}
+      <div className="absolute inset-0 bg-dot-grid opacity-50 pointer-events-none" />
+
       <div className="relative mx-auto max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
@@ -58,10 +61,10 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative text-center"
             >
               {/* Number badge */}
@@ -70,14 +73,14 @@ export function HowItWorks() {
               </div>
 
               {/* Card */}
-              <div className="pt-8 pb-6 px-6 rounded-3xl bg-card border border-border group-hover:border-primary/30 group-hover:shadow-xl group-hover:shadow-primary/5 transition-all duration-300 group-hover:-translate-y-2">
+              <div className="pt-8 pb-6 px-6 rounded-3xl bg-card border border-border group-hover:border-primary/30 group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1 flex flex-col h-full">
                 {/* Icon */}
                 <div className={`mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-${step.color} to-${step.color}/80 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                   <step.icon className="h-8 w-8 text-white" />
                 </div>
 
                 <h3 className="mt-6 text-xl font-bold text-foreground">{step.title}</h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed">{step.description}</p>
+                <p className="mt-3 text-muted-foreground leading-relaxed flex-1">{step.description}</p>
               </div>
             </div>
           ))}

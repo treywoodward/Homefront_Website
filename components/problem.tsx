@@ -43,8 +43,12 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-background via-secondary/30 to-background">
+    <section className="py-14 md:py-20 px-6 bg-secondary/20 relative overflow-hidden">
       <div className="mx-auto max-w-5xl">
+        {/* Faint home watermark */}
+        <svg className="absolute right-4 bottom-4 w-72 h-72 text-primary opacity-[0.04] pointer-events-none" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <path d="M50 5L5 45v55h35V65h20v35h35V45L50 5z" />
+        </svg>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center text-balance">
           Homeownership in <span className="text-primary">Lubbock</span> is different.
         </h2>
@@ -52,11 +56,11 @@ export function Problem() {
           The High Plains climate is tough on homes. You shouldn&apos;t have to fight it alone.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {problems.map((problem, index) => (
-            <div 
+            <div
               key={index}
-              className="group flex items-start gap-4 p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
+              className="group flex items-start gap-4 p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 h-full"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${problem.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
@@ -67,7 +71,7 @@ export function Problem() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <p className="text-xl md:text-2xl text-muted-foreground">
             Most homeowners are reactive. <span className="text-primary font-semibold">That&apos;s the problem.</span>
           </p>

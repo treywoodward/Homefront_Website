@@ -35,7 +35,7 @@ export function Header() {
         </div>
 
         <div className="hidden md:block">
-          <Button className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary px-6 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all">
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all">
             Get Started
           </Button>
         </div>
@@ -75,7 +75,7 @@ export function Header() {
             >
               About
             </Link>
-            <Button className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 w-full mt-2 py-6 shadow-lg">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2 py-6 shadow-lg">
               Get Started
             </Button>
           </div>

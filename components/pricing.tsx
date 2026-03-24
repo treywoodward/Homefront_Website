@@ -57,12 +57,7 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 md:py-32 px-6 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/5 via-transparent to-transparent rounded-full" />
-      </div>
-
+    <section id="pricing" className="py-14 md:py-20 px-6 relative overflow-hidden">
       <div className="relative mx-auto max-w-5xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
@@ -73,13 +68,13 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
-            <div 
+            <div
               key={index}
-              className={`group relative p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 ${
-                plan.popular 
-                  ? "border-primary bg-gradient-to-b from-primary/10 to-card shadow-2xl shadow-primary/20 scale-105 md:scale-110" 
+              className={`group relative p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 flex flex-col ${
+                plan.popular
+                  ? "border-primary bg-gradient-to-b from-primary/10 to-card shadow-2xl shadow-primary/20 scale-105 md:scale-110"
                   : "border-border bg-card hover:border-primary/30 hover:shadow-xl"
               }`}
             >
@@ -87,13 +82,13 @@ export function Pricing() {
               <div className={`absolute inset-0 rounded-3xl bg-gradient-to-b ${plan.gradient} opacity-50`} />
 
               {plan.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-gradient-to-r from-primary to-accent text-white text-sm font-bold rounded-full flex items-center gap-2 shadow-xl animate-scale-pulse">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-gradient-to-r from-primary to-accent text-white text-sm font-bold rounded-full flex items-center gap-2 shadow-xl">
                   <Sparkles className="h-4 w-4" />
                   Most Popular
                 </span>
               )}
-              
-              <div className="relative">
+
+              <div className="relative flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className={`text-5xl font-bold ${plan.popular ? "bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" : "text-foreground"}`}>
@@ -103,7 +98,7 @@ export function Pricing() {
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">{plan.description}</p>
 
-                <ul className="mt-8 space-y-4">
+                <ul className="mt-8 space-y-4 flex-1">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
@@ -116,10 +111,10 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
                   className={`group/btn w-full mt-8 py-6 text-base transition-all duration-300 ${
-                    plan.popular 
-                      ? "bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30" 
+                    plan.popular
+                      ? "bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30"
                       : "bg-foreground text-background hover:bg-foreground/90"
                   }`}
                 >

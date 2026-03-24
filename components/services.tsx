@@ -1,11 +1,11 @@
 "use client"
 
-import { 
-  ClipboardCheck, 
-  Wrench, 
-  FileText, 
-  Users, 
-  Calendar, 
+import {
+  ClipboardCheck,
+  Wrench,
+  FileText,
+  Users,
+  Calendar,
   MapPin,
   Hammer,
   Leaf,
@@ -35,7 +35,7 @@ const addOns = [
 
 export function Services() {
   return (
-    <section className="py-20 md:py-32 px-6 relative overflow-hidden">
+    <section className="py-14 md:py-20 px-6 relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-secondary/30 to-transparent" />
@@ -51,11 +51,11 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {mainServices.map((service, index) => (
-            <div 
+            <div
               key={index}
-              className="group flex items-center gap-4 p-5 rounded-2xl border border-border bg-card hover:bg-card/80 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
+              className="group flex items-center gap-4 p-5 rounded-2xl border border-border bg-card hover:bg-card/80 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 h-full"
             >
               <div className={`w-12 h-12 rounded-xl ${service.bg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className={`h-6 w-6 ${service.color}`} />
@@ -65,11 +65,11 @@ export function Services() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <p className="text-sm font-medium text-muted-foreground mb-6">Optional Add-ons</p>
           <div className="flex flex-wrap justify-center gap-4">
             {addOns.map((addon, index) => (
-              <div 
+              <div
                 key={index}
                 className="group flex items-center gap-3 px-6 py-4 rounded-full border-2 border-dashed border-border bg-card hover:border-accent hover:bg-accent/5 transition-all duration-300"
               >

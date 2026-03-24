@@ -255,3 +255,9 @@
 .delay-500 { animation-delay: 0.5s; }
 .delay-600 { animation-delay: 0.6s; }
 .delay-700 { animation-delay: 0.7s; }
+
+/* Subtle dot grid texture */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, oklch(0.75 0.01 252 / 0.5) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

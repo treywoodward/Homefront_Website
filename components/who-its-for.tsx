@@ -12,26 +12,20 @@ const audiences = [
 
 export function WhoItsFor() {
   return (
-    <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-background via-secondary/30 to-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-      </div>
-
+    <section className="py-14 md:py-20 px-6 relative overflow-hidden">
       <div className="relative mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-            Built for <span className="bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text text-transparent animate-gradient">Lubbock</span> homeowners.
+            Built for <span className="text-primary">Lubbock</span> homeowners.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
             Whether you&apos;re working the fields or running a business, your home shouldn&apos;t be another job.
           </p>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           {audiences.map((audience, index) => (
-            <div 
+            <div
               key={index}
               className={`group flex items-center gap-3 px-6 py-4 rounded-2xl bg-card border border-border hover:border-${audience.color}/40 hover:shadow-lg hover:shadow-${audience.color}/10 transition-all duration-300 hover:-translate-y-1`}
             >
@@ -43,11 +37,11 @@ export function WhoItsFor() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-primary/10 via-accent/10 to-tertiary/10 border border-primary/20">
+        <div className="mt-10 text-center">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-secondary border border-border">
             <Check className="h-6 w-6 text-primary" />
             <p className="text-xl text-foreground font-medium">
-              If your time matters, <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold">this makes sense.</span>
+              If your time matters, <span className="text-primary font-bold">this makes sense.</span>
             </p>
           </div>
         </div>
