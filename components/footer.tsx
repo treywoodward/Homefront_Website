@@ -11,7 +11,7 @@ export function Footer() {
               Homefront
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Private home management for Lubbock homeowners. Serving Lubbock and the greater High Plains.
+              Private home management for homeowners across West Texas. Rooted in Lubbock.
             </p>
             <div className="mt-5 space-y-2">
               <div className="flex items-center gap-2.5 text-sm text-muted-foreground">

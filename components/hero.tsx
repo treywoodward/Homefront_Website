@@ -1,18 +1,40 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
+
+function useCountUp(target: number, duration: number, active: boolean): number {
+  const [value, setValue] = useState(0)
+  useEffect(() => {
+    if (!active) return
+    const start = Date.now()
+    const tick = () => {
+      const progress = Math.min((Date.now() - start) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setValue(Math.round(eased * target))
+      if (progress < 1) requestAnimationFrame(tick)
+    }
+    requestAnimationFrame(tick)
+  }, [active, target, duration])
+  return value
+}
 
 export function Hero() {
+  const { ref: statsRef, inView: statsInView } = useInView(0.4)
+  const homes = useCountUp(500, 1400, statsInView)
+  const satisfaction = useCountUp(98, 1100, statsInView)
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 border-b border-border">
       <div className="mx-auto max-w-5xl">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 mb-10 animate-fade-in-up">
           <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
           </span>
-          <span className="text-xs font-medium text-primary tracking-wide uppercase">Now serving Lubbock & the High Plains</span>
+          <span className="text-xs font-medium text-primary tracking-wide uppercase">Rooted in Lubbock. Serving West Texas.</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] text-balance animate-fade-in-up delay-100">
@@ -22,31 +44,37 @@ export function Hero() {
         </h1>
 
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up delay-200">
-          Homefront is a subscription-based home management service for Lubbock homeowners. We handle the inspections, vendors, and maintenance — proactively.
+          Homefront is a subscription home management service for West Texas homeowners. We know the heat, the dust, and the demands — and we handle it all, proactively.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-fade-in-up delay-300">
-          <Button size="lg" className="bg-foreground text-background hover:bg-foreground/85 px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-colors">
+          <Button
+            size="lg"
+            className="bg-foreground text-background hover:bg-foreground/85 active:scale-[0.98] px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-150"
+          >
             Get Started
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5" />
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="border-border text-foreground hover:bg-secondary px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-colors"
+            className="border-border text-foreground hover:bg-secondary hover:border-primary/30 active:scale-[0.98] px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-150"
           >
             See How It Works
           </Button>
         </div>
 
-        <div className="mt-16 pt-10 border-t border-border flex flex-wrap items-center gap-10 md:gap-16 animate-fade-in-up delay-400">
+        <div
+          ref={statsRef}
+          className="mt-16 pt-10 border-t border-border flex flex-wrap items-center gap-10 md:gap-16 animate-fade-in-up delay-400"
+        >
           <div>
-            <div className="text-3xl font-bold text-foreground">500+</div>
+            <div className="text-3xl font-bold text-foreground tabular-nums">{statsInView ? `${homes}+` : '0+'}</div>
             <div className="text-sm text-muted-foreground mt-0.5">Homes Managed</div>
           </div>
           <div className="w-px h-8 bg-border hidden md:block" />
           <div>
-            <div className="text-3xl font-bold text-foreground">98%</div>
+            <div className="text-3xl font-bold text-foreground tabular-nums">{statsInView ? `${satisfaction}%` : '0%'}</div>
             <div className="text-sm text-muted-foreground mt-0.5">Client Satisfaction</div>
           </div>
           <div className="w-px h-8 bg-border hidden md:block" />
