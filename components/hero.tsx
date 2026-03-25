@@ -1,80 +1,58 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sun, Wind, Home } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative pt-24 pb-12 md:pt-32 md:pb-18 px-6 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-80 h-80 bg-primary/25 rounded-full blur-3xl animate-float-slow animate-blob-morph" />
-        <div className="absolute top-40 right-20 w-64 h-64 bg-accent/22 rounded-full blur-3xl animate-float delay-200" />
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-tertiary/28 rounded-full blur-3xl animate-float delay-400" />
-        <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-primary/15 rounded-full blur-2xl animate-glow-pulse delay-300" />
-        {/* Dot grid texture */}
-        <div className="absolute inset-0 bg-dot-grid opacity-60" />
-        {/* Faint house watermark */}
-        <svg className="absolute right-8 bottom-0 w-[420px] h-[420px] text-primary opacity-[0.04] pointer-events-none" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-          <path d="M50 5L5 45v55h35V65h20v35h35V45L50 5z" />
-        </svg>
-      </div>
-
-      {/* Floating icons */}
-      <div className="absolute inset-0 pointer-events-none hidden lg:block">
-        <Sun className="absolute top-32 right-[15%] w-10 h-10 text-primary/60 animate-float drop-shadow-lg" />
-        <Wind className="absolute top-48 left-[12%] w-8 h-8 text-accent/65 animate-float-slow delay-300 drop-shadow-lg" />
-        <Home className="absolute bottom-32 right-[20%] w-9 h-9 text-tertiary/65 animate-float delay-500 drop-shadow-lg" />
-      </div>
-
-      <div className="relative mx-auto max-w-4xl text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/8 border border-primary/20 mb-8 animate-fade-in-up">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 border-b border-border">
+      <div className="mx-auto max-w-5xl">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 mb-10 animate-fade-in-up">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
           </span>
-          <span className="text-sm font-medium text-foreground">Now serving Lubbock & the High Plains</span>
+          <span className="text-xs font-medium text-primary tracking-wide uppercase">Now serving Lubbock & the High Plains</span>
         </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] text-balance animate-fade-in-up delay-100">
-          Stop managing your home.
-          <br />
-          <span className="text-primary">Start having it managed.</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] text-balance animate-fade-in-up delay-100">
+          Stop managing<br />
+          your home.<br />
+          <span className="text-primary">Start living in it.</span>
         </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty animate-fade-in-up delay-200">
-          Homefront is a subscription-based home management service built for Lubbock homeowners. We handle the dust storms, the heat, and the maintenance—so your home stays in peak condition.
+        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up delay-200">
+          Homefront is a subscription-based home management service for Lubbock homeowners. We handle the inspections, vendors, and maintenance — proactively.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up delay-300">
-          <Button size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base shadow-xl shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/40 hover:scale-105">
+        <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-fade-in-up delay-300">
+          <Button size="lg" className="bg-foreground text-background hover:bg-foreground/85 px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-colors">
             Get Started
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-accent/40 text-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent px-8 py-6 text-base transition-all hover:scale-105"
+            className="border-border text-foreground hover:bg-secondary px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-colors"
           >
             See How It Works
           </Button>
         </div>
 
-        {/* Stats bar */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12 animate-fade-in-up delay-400">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
-            <div className="text-sm text-muted-foreground">Homes Managed</div>
+        <div className="mt-16 pt-10 border-t border-border flex flex-wrap items-center gap-10 md:gap-16 animate-fade-in-up delay-400">
+          <div>
+            <div className="text-3xl font-bold text-foreground">500+</div>
+            <div className="text-sm text-muted-foreground mt-0.5">Homes Managed</div>
           </div>
-          <div className="w-px h-12 bg-border hidden md:block" />
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-accent">98%</div>
-            <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+          <div className="w-px h-8 bg-border hidden md:block" />
+          <div>
+            <div className="text-3xl font-bold text-foreground">98%</div>
+            <div className="text-sm text-muted-foreground mt-0.5">Client Satisfaction</div>
           </div>
-          <div className="w-px h-12 bg-border hidden md:block" />
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-tertiary">24/7</div>
-            <div className="text-sm text-muted-foreground">Emergency Support</div>
+          <div className="w-px h-8 bg-border hidden md:block" />
+          <div>
+            <div className="text-3xl font-bold text-foreground">24/7</div>
+            <div className="text-sm text-muted-foreground mt-0.5">Emergency Support</div>
           </div>
         </div>
       </div>

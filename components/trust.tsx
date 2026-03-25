@@ -3,15 +3,15 @@
 import { UserCheck, ClipboardList, MessageSquare, BadgeCheck, Star } from "lucide-react"
 
 const trustPoints = [
-  { icon: UserCheck, text: "Vetted local Lubbock professionals", color: "text-primary", bg: "bg-primary/10" },
-  { icon: ClipboardList, text: "Climate-specific inspection process", color: "text-accent", bg: "bg-accent/10" },
-  { icon: MessageSquare, text: "Transparent communication always", color: "text-tertiary", bg: "bg-tertiary/10" },
-  { icon: BadgeCheck, text: "No upselling, no hidden fees", color: "text-primary", bg: "bg-primary/10" },
+  { icon: UserCheck, text: "Vetted local Lubbock professionals", color: "text-primary", bg: "bg-primary/8" },
+  { icon: ClipboardList, text: "Climate-specific inspection process", color: "text-accent", bg: "bg-accent/8" },
+  { icon: MessageSquare, text: "Transparent communication always", color: "text-tertiary", bg: "bg-tertiary/8" },
+  { icon: BadgeCheck, text: "No upselling, no hidden fees", color: "text-primary", bg: "bg-primary/8" },
 ]
 
 const testimonials = [
   {
-    quote: "Between work in the oil field and family, I had zero time for home stuff. Homefront handles everything—even coordinated repairs after that bad dust storm last spring.",
+    quote: "Between work in the oil field and family, I had zero time for home stuff. Homefront handles everything — even coordinated repairs after that bad dust storm last spring.",
     name: "Marcus T.",
     location: "Lubbock",
     rating: 5,
@@ -26,57 +26,52 @@ const testimonials = [
 
 export function Trust() {
   return (
-    <section id="about" className="py-14 md:py-20 px-6 bg-secondary/20 relative overflow-hidden">
+    <section id="about" className="py-20 md:py-28 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl">
-        {/* Faint shield watermark */}
-        <svg className="absolute right-0 top-8 w-64 h-64 text-accent opacity-[0.04] pointer-events-none" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-          <path d="M50 5L10 20v30c0 22 17 42 40 50 23-8 40-28 40-50V20L50 5z" />
-        </svg>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-center text-balance">
-          Your home is too important for <span className="text-accent">guesswork.</span>
-        </h2>
+        <div className="max-w-xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Why Homefront</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
+            Your home is too important for guesswork.
+          </h2>
+        </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {trustPoints.map((point, index) => (
             <div
               key={index}
-              className="group flex items-center gap-4 p-5 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full"
+              className="flex items-center gap-4 p-5 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors duration-200"
             >
-              <div className={`w-12 h-12 rounded-xl ${point.bg} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                <point.icon className={`h-6 w-6 ${point.color}`} />
+              <div className={`w-9 h-9 rounded-md ${point.bg} flex items-center justify-center flex-shrink-0`}>
+                <point.icon className={`h-4 w-4 ${point.color}`} />
               </div>
-              <span className="text-lg text-foreground font-medium">{point.text}</span>
+              <span className="text-sm font-medium text-foreground">{point.text}</span>
             </div>
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative p-8 rounded-3xl bg-card border border-border hover:border-primary/20 transition-all group flex flex-col h-full"
+              className="p-7 rounded-lg bg-card border border-border flex flex-col h-full"
             >
-              {/* Quote decoration */}
-              <div className="absolute top-4 right-6 text-6xl font-serif text-primary/10 group-hover:text-primary/20 transition-colors">&ldquo;</div>
-
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-0.5 mb-5">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
 
-              <blockquote className="text-foreground leading-relaxed flex-1">
+              <blockquote className="text-sm text-foreground leading-relaxed flex-1">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
-              <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+              <div className="mt-6 pt-5 border-t border-border flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}, TX</p>
+                  <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-xs text-muted-foreground">{testimonial.location}, TX</p>
                 </div>
               </div>
             </div>

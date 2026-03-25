@@ -16,15 +16,15 @@ import {
 } from "lucide-react"
 
 const mainServices = [
-  { icon: ClipboardCheck, text: "Scheduled home inspections", color: "text-primary", bg: "bg-primary/10" },
-  { icon: Wind, text: "Post-storm damage assessments", color: "text-accent", bg: "bg-accent/10" },
-  { icon: Wrench, text: "Preventative maintenance tracking", color: "text-tertiary", bg: "bg-tertiary/10" },
-  { icon: Thermometer, text: "HVAC seasonal check-ups", color: "text-primary", bg: "bg-primary/10" },
-  { icon: FileText, text: "Digital home history + records", color: "text-accent", bg: "bg-accent/10" },
-  { icon: Users, text: "Local vendor coordination", color: "text-tertiary", bg: "bg-tertiary/10" },
-  { icon: Calendar, text: "Priority scheduling", color: "text-primary", bg: "bg-primary/10" },
-  { icon: MapPin, text: "Trusted High Plains network", color: "text-accent", bg: "bg-accent/10" },
-  { icon: Droplets, text: "Water system monitoring", color: "text-tertiary", bg: "bg-tertiary/10" },
+  { icon: ClipboardCheck, text: "Scheduled home inspections", color: "text-primary", bg: "bg-primary/8" },
+  { icon: Wind, text: "Post-storm damage assessments", color: "text-accent", bg: "bg-accent/8" },
+  { icon: Wrench, text: "Preventative maintenance tracking", color: "text-tertiary", bg: "bg-tertiary/8" },
+  { icon: Thermometer, text: "HVAC seasonal check-ups", color: "text-primary", bg: "bg-primary/8" },
+  { icon: FileText, text: "Digital home history + records", color: "text-accent", bg: "bg-accent/8" },
+  { icon: Users, text: "Local vendor coordination", color: "text-tertiary", bg: "bg-tertiary/8" },
+  { icon: Calendar, text: "Priority scheduling", color: "text-primary", bg: "bg-primary/8" },
+  { icon: MapPin, text: "Trusted High Plains network", color: "text-accent", bg: "bg-accent/8" },
+  { icon: Droplets, text: "Water system monitoring", color: "text-tertiary", bg: "bg-tertiary/8" },
 ]
 
 const addOns = [
@@ -35,42 +35,42 @@ const addOns = [
 
 export function Services() {
   return (
-    <section className="py-14 md:py-20 px-6 relative overflow-hidden">
-
-      <div className="relative mx-auto max-w-6xl">
-        <div className="text-center">
+    <section className="py-20 md:py-28 px-6">
+      <div className="mx-auto max-w-5xl">
+        <div className="max-w-xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Services</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-            Everything your <span className="text-primary">Lubbock</span> home needs.
+            Everything your Lubbock home needs.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Services designed specifically for the unique challenges of High Plains homeownership.
+          <p className="mt-4 text-lg text-muted-foreground">
+            Designed for the unique challenges of High Plains homeownership.
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {mainServices.map((service, index) => (
             <div
               key={index}
-              className="group flex items-center gap-4 p-5 rounded-2xl border border-border bg-card hover:bg-card/80 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 h-full"
+              className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card hover:border-primary/30 transition-colors duration-200 h-full"
             >
-              <div className={`w-12 h-12 rounded-xl ${service.bg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon className={`h-6 w-6 ${service.color}`} />
+              <div className={`w-9 h-9 rounded-md ${service.bg} flex items-center justify-center flex-shrink-0`}>
+                <service.icon className={`h-4 w-4 ${service.color}`} />
               </div>
-              <span className="text-foreground font-medium">{service.text}</span>
+              <span className="text-sm text-foreground font-medium">{service.text}</span>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-6">Optional Add-ons</p>
-          <div className="flex flex-wrap justify-center gap-4">
+        <div className="mt-10">
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Optional Add-ons</p>
+          <div className="flex flex-wrap gap-3">
             {addOns.map((addon, index) => (
               <div
                 key={index}
-                className="group flex items-center gap-3 px-6 py-4 rounded-full border-2 border-dashed border-border bg-card hover:border-accent hover:bg-accent/5 transition-all duration-300"
+                className="flex items-center gap-2.5 px-4 py-2.5 rounded-lg border border-dashed border-border bg-card hover:border-primary/40 transition-colors duration-200"
               >
-                <addon.icon className={`h-5 w-5 ${addon.color} group-hover:scale-110 transition-transform`} />
-                <span className="font-medium text-foreground">{addon.text}</span>
+                <addon.icon className={`h-4 w-4 ${addon.color}`} />
+                <span className="text-sm font-medium text-foreground">{addon.text}</span>
               </div>
             ))}
           </div>
