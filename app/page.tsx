@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { HowItWorks } from "@/components/how-it-works"
+import { WhoItsFor } from "@/components/who-its-for"
 import { Pricing } from "@/components/pricing"
 import { Trust } from "@/components/trust"
 import { FinalCTA } from "@/components/final-cta"
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <HowItWorks />
+      <WhoItsFor />
       <Pricing />
       <Trust />
       <FinalCTA />
