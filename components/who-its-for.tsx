@@ -1,52 +1,24 @@
 "use client"
 
-import { Briefcase, Users, Building, Home, Clock, KeyRound, HeartHandshake, Sofa } from "lucide-react"
 import { AnimateIn } from "@/components/animate-in"
-
-const audiences = [
-  { icon: Briefcase, text: "Oil & gas professionals", color: "text-primary", bg: "bg-primary/8" },
-  { icon: Users, text: "Families managing full schedules", color: "text-accent", bg: "bg-accent/8" },
-  { icon: Building, text: "Owners of higher-value properties", color: "text-tertiary", bg: "bg-tertiary/8" },
-  { icon: Home, text: "Investors with multiple homes", color: "text-primary", bg: "bg-primary/8" },
-  { icon: KeyRound, text: "First-time homeowners still learning the ropes", color: "text-accent", bg: "bg-accent/8" },
-  { icon: Sofa, text: "Seniors who want their home handled, not a hassle", color: "text-tertiary", bg: "bg-tertiary/8" },
-  { icon: HeartHandshake, text: "Those managing a home on their own for the first time", color: "text-primary", bg: "bg-primary/8" },
-  { icon: Clock, text: "Anyone tired of the hassle", color: "text-accent", bg: "bg-accent/8" },
-]
 
 export function WhoItsFor() {
   return (
     <section className="py-20 md:py-28 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
-          <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-              Built for West Texas homeowners.
+          <div className="md:flex md:items-start md:gap-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground md:w-1/3 flex-shrink-0">
+              Who&apos;s it for?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Whether you&apos;re working the field or running a business, your home shouldn&apos;t be another job.
-            </p>
-          </div>
-        </AnimateIn>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {audiences.map((audience, index) => (
-            <AnimateIn key={index} delay={index * 60} className="h-full">
-              <div className="flex items-center gap-4 p-5 rounded-lg bg-card border border-border hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-default">
-                <div className={`w-9 h-9 rounded-md ${audience.bg} flex items-center justify-center flex-shrink-0`}>
-                  <audience.icon className={`h-4 w-4 ${audience.color}`} />
-                </div>
-                <span className="text-sm font-medium text-foreground">{audience.text}</span>
-              </div>
-            </AnimateIn>
-          ))}
-        </div>
-
-        <AnimateIn delay={500}>
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-lg text-muted-foreground">
-              If your time matters, <span className="text-foreground font-semibold">this makes sense.</span>
-            </p>
+            <div className="mt-6 md:mt-1">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                Anyone who doesn&apos;t have the <span className="text-foreground font-semibold">ability</span>, <span className="text-foreground font-semibold">capacity</span>, or <span className="text-foreground font-semibold">desire</span> to manage home ownership on their own.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                Whether that&apos;s a first-time buyer still finding their footing, a busy professional with no time to chase contractors, a senior who wants their home handled — not a hassle, or someone suddenly managing a home on their own for the first time. If the job of homeownership feels like too much, that&apos;s exactly what we&apos;re here for.
+              </p>
+            </div>
           </div>
         </AnimateIn>
       </div>
