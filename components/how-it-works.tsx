@@ -40,8 +40,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">How It Works</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
               Simple. Predictable. Done.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">

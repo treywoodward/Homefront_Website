@@ -30,8 +30,7 @@ export function Solution() {
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The Solution</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
               Homefront handles it — before it becomes a problem.
             </h2>
           </div>

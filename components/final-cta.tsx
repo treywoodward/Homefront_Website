@@ -10,8 +10,7 @@ export function FinalCTA() {
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-background/40 mb-4">Get Started</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-balance leading-[1.1]">
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-balance leading-[1.1]">
               Your home should run smoothly.
               <br />
               <span className="text-accent">We make sure it does.</span>

@@ -18,8 +18,7 @@ export function Problem() {
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">The Problem</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
               Homeownership in West Texas is different.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -41,13 +40,6 @@ export function Problem() {
           ))}
         </div>
 
-        <AnimateIn delay={500}>
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-lg text-muted-foreground">
-              Most homeowners are reactive. <span className="text-foreground font-semibold">That&apos;s the problem.</span>
-            </p>
-          </div>
-        </AnimateIn>
       </div>
     </section>
   )

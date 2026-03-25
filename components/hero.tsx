@@ -29,14 +29,6 @@ export function Hero() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 border-b border-border">
       <div className="mx-auto max-w-5xl">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 mb-10 animate-fade-in-up">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
-          </span>
-          <span className="text-xs font-medium text-primary tracking-wide uppercase">Rooted in Lubbock. Serving West Texas.</span>
-        </div>
-
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] text-balance animate-fade-in-up delay-100">
           Stop managing<br />
           your home.<br />
