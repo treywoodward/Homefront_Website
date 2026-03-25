@@ -36,7 +36,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up delay-200">
-          Homefront is a subscription home management service for West Texas homeowners. We know the heat, the dust, and the demands — and we handle it all, proactively.
+          A monthly home management service for West Texas homeowners. We schedule the inspections, coordinate the vendors, and handle the maintenance — so you never have to think about it.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-fade-in-up delay-300">

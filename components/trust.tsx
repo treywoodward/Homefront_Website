@@ -1,14 +1,7 @@
 "use client"
 
-import { UserCheck, ClipboardList, MessageSquare, BadgeCheck, Star } from "lucide-react"
+import { Star } from "lucide-react"
 import { AnimateIn } from "@/components/animate-in"
-
-const trustPoints = [
-  { icon: UserCheck, text: "Vetted local West Texas professionals", color: "text-primary", bg: "bg-primary/8" },
-  { icon: ClipboardList, text: "Climate-specific inspection process", color: "text-accent", bg: "bg-accent/8" },
-  { icon: MessageSquare, text: "Transparent communication always", color: "text-tertiary", bg: "bg-tertiary/8" },
-  { icon: BadgeCheck, text: "No upselling, no hidden fees", color: "text-primary", bg: "bg-primary/8" },
-]
 
 const testimonials = [
   {
@@ -30,27 +23,12 @@ export function Trust() {
     <section id="about" className="py-20 md:py-28 px-6 bg-secondary">
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
-          <div className="max-w-xl">
-<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground text-balance">
-              Your home is too important for guesswork.
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground max-w-xl text-balance">
+            Don&apos;t take our word for it.
+          </h2>
         </AnimateIn>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {trustPoints.map((point, index) => (
-            <AnimateIn key={index} delay={index * 70} className="h-full">
-              <div className="flex items-center gap-4 p-5 rounded-lg bg-card border border-border hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-default">
-                <div className={`w-9 h-9 rounded-md ${point.bg} flex items-center justify-center flex-shrink-0`}>
-                  <point.icon className={`h-4 w-4 ${point.color}`} />
-                </div>
-                <span className="text-sm font-medium text-foreground">{point.text}</span>
-              </div>
-            </AnimateIn>
-          ))}
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
           {testimonials.map((testimonial, index) => (
             <AnimateIn key={index} delay={index * 120} className="h-full">
               <div className="p-7 rounded-lg bg-card border border-border hover:border-primary/20 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 flex flex-col h-full cursor-default">
