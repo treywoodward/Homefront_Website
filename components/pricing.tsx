@@ -4,53 +4,20 @@ import { Button } from "@/components/ui/button"
 import { Check, ArrowRight } from "lucide-react"
 import { AnimateIn } from "@/components/animate-in"
 
-const plans = [
-  {
-    name: "Essential",
-    price: "$79",
-    period: "/mo",
-    description: "Quarterly inspections + tracking",
-    features: [
-      "Quarterly home inspections",
-      "Digital maintenance tracking",
-      "Issue documentation",
-      "Email support",
-    ],
-    popular: false,
-    checkColor: "bg-tertiary",
-  },
-  {
-    name: "Standard",
-    price: "$149",
-    period: "/mo",
-    description: "Full coordination + priority scheduling",
-    features: [
-      "Monthly home inspections",
-      "Vendor coordination",
-      "Priority scheduling",
-      "Digital home records",
-      "Phone & email support",
-      "Post-storm assessments",
-    ],
-    popular: true,
-    checkColor: "bg-primary",
-  },
-  {
-    name: "Concierge",
-    price: "$299",
-    period: "/mo",
-    description: "Full-service oversight + dedicated manager",
-    features: [
-      "Bi-weekly check-ins",
-      "Dedicated home manager",
-      "All vendor coordination",
-      "24/7 emergency line",
-      "Quarterly reports",
-      "Home improvement consulting",
-    ],
-    popular: false,
-    checkColor: "bg-accent",
-  },
+const included = [
+  "Monthly home check-ins",
+  "Quarterly walk-throughs",
+  "Yearly full inspections",
+  "24/7 access to your Home Advisor",
+  "Vendor coordination — we make the calls",
+  "Digital home records & documentation",
+]
+
+const examples = [
+  { sqft: "1,500", price: "$150" },
+  { sqft: "2,000", price: "$200" },
+  { sqft: "2,500", price: "$250" },
+  { sqft: "3,000", price: "$300" },
 ]
 
 export function Pricing() {
@@ -58,68 +25,72 @@ export function Pricing() {
     <section id="pricing" className="py-20 md:py-28 px-6">
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
-          <div className="max-w-xl">
-<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              Straightforward pricing.
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+              One rate. Whatever the need.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Plans designed for West Texas homeowners. No surprises.
+              Instead of calling vendors, suppliers, and contractors — you call us. We handle everything, start to finish.
             </p>
           </div>
         </AnimateIn>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {plans.map((plan, index) => (
-            <AnimateIn key={index} delay={index * 90} className="h-full">
-              <div
-                className={`relative p-7 rounded-lg border flex flex-col h-full transition-all duration-200 hover:-translate-y-0.5 ${
-                  plan.popular
-                    ? "border-primary bg-primary/4 hover:shadow-md hover:shadow-primary/10"
-                    : "border-border bg-card hover:border-primary/30 hover:shadow-sm"
-                }`}
-              >
-                {plan.popular && (
-                  <span className="absolute -top-3 left-6 px-3 py-1 bg-primary text-white text-xs font-bold rounded-md">
-                    Most Popular
-                  </span>
-                )}
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-                <div>
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{plan.name}</h3>
-                  <div className="mt-3 flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                    <span className="text-sm text-muted-foreground">{plan.period}</span>
-                  </div>
-                  <p className="mt-1 text-sm text-muted-foreground">{plan.description}</p>
+          {/* Rate card */}
+          <AnimateIn delay={60}>
+            <div className="p-8 rounded-lg border border-primary bg-primary/4">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide">Simple pricing</p>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="text-6xl font-bold text-foreground">10¢</span>
+                <div className="text-muted-foreground leading-tight">
+                  <span className="block text-base font-medium">per sq ft</span>
+                  <span className="block text-sm">per month</span>
                 </div>
-
-                <ul className="mt-7 space-y-3 flex-1">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <div className={`w-4 h-4 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.checkColor}`}>
-                        <Check className="h-2.5 w-2.5 text-white" />
-                      </div>
-                      <span className="text-sm text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  className={`w-full mt-7 py-5 text-sm font-semibold rounded-lg active:scale-[0.98] transition-all duration-150 ${
-                    plan.popular
-                      ? "bg-primary text-white hover:bg-primary/90"
-                      : "bg-foreground text-background hover:bg-foreground/85"
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
               </div>
-            </AnimateIn>
-          ))}
+              <p className="mt-4 text-sm text-muted-foreground">
+                Your home&apos;s square footage sets your rate — nothing more. No tiers, no surprises.
+              </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-2">
+                {examples.map((ex) => (
+                  <div key={ex.sqft} className="flex items-center justify-between px-3 py-2 rounded-md bg-background border border-border text-sm">
+                    <span className="text-muted-foreground">{ex.sqft} sq ft</span>
+                    <span className="font-semibold text-foreground">{ex.price}/mo</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button className="w-full mt-7 py-5 text-sm font-semibold rounded-lg bg-primary text-white hover:bg-primary/90 active:scale-[0.98] transition-all duration-150">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </AnimateIn>
+
+          {/* Included in every subscription */}
+          <AnimateIn delay={120}>
+            <div className="p-8 rounded-lg border border-border bg-card">
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Included in every subscription</p>
+              <ul className="mt-6 space-y-4">
+                {included.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-4 h-4 rounded-sm flex items-center justify-center flex-shrink-0 mt-0.5 bg-primary">
+                      <Check className="h-2.5 w-2.5 text-white" />
+                    </div>
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-sm text-muted-foreground border-t border-border pt-6">
+                One number to call. One team that knows your home. We are the call — for maintenance, repairs, inspections, and everything in between.
+              </p>
+            </div>
+          </AnimateIn>
+
         </div>
 
-        <AnimateIn delay={300}>
+        <AnimateIn delay={240}>
           <p className="mt-8 text-sm text-muted-foreground">
             Available to homeowners throughout West Texas. <span className="text-foreground font-medium">Questions? We&apos;re happy to talk.</span>
           </p>
