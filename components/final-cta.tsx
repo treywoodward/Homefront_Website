@@ -6,7 +6,7 @@ import { AnimateIn } from "@/components/animate-in"
 
 export function FinalCTA() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-[oklch(0.18_0.12_258)]">
+    <section className="py-20 md:py-28 px-6 bg-[oklch(0.20_0.07_152)]">
       <div className="mx-auto max-w-5xl">
         <AnimateIn>
           <div className="max-w-2xl">
