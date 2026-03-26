@@ -41,7 +41,7 @@ export function HowItWorks() {
         <AnimateIn>
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              You own it. We run it.
+              One relationship.<br />Everything handled.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               No vendors. No coordination. No guesswork. Just one relationship that handles everything your home needs.

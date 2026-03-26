@@ -29,17 +29,28 @@ export function Hero() {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 border-b border-border">
       <div className="mx-auto max-w-5xl">
+
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.0] text-balance animate-fade-in-up delay-100">
-          Stop managing<br />
-          your home.<br />
-          <span className="text-primary">Start living in it.</span>
+          You own it.<br />
+          We run it.
         </h1>
 
-        <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up delay-200">
-          A monthly home management service for West Texas homeowners. We schedule the inspections, coordinate the vendors, and handle the maintenance — so you never have to think about it.
+        <p className="mt-8 text-xl md:text-2xl text-foreground font-medium max-w-xl leading-snug animate-fade-in-up delay-200">
+          A dedicated manager for your home.
+          <br className="hidden sm:block" />{" "}
+          One call handles everything — maintenance, vendors, repairs, and oversight.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-start gap-3 animate-fade-in-up delay-300">
+        <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed animate-fade-in-up delay-200">
+          No more coordinating contractors or chasing issues. We manage your home behind the scenes so it simply works.
+        </p>
+
+        <p className="mt-6 text-sm font-medium text-muted-foreground animate-fade-in-up delay-200">
+          <span className="inline-block w-5 h-px bg-border align-middle mr-2" />
+          Starting at $0.10 per square foot
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row items-start gap-3 animate-fade-in-up delay-300">
           <Button
             size="lg"
             className="bg-foreground text-background hover:bg-foreground/85 active:scale-[0.98] px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-150"
@@ -52,7 +63,7 @@ export function Hero() {
             size="lg"
             className="border-border text-foreground hover:bg-secondary hover:border-primary/30 active:scale-[0.98] px-7 py-5 text-sm font-semibold tracking-wide rounded-lg transition-all duration-150"
           >
-            See How It Works
+            How It Works
           </Button>
         </div>
 
@@ -72,9 +83,10 @@ export function Hero() {
           <div className="w-px h-8 bg-border hidden md:block" />
           <div>
             <div className="text-3xl font-bold text-foreground">24/7</div>
-            <div className="text-sm text-muted-foreground mt-0.5">Emergency Support</div>
+            <div className="text-sm text-muted-foreground mt-0.5">Advisor Access</div>
           </div>
         </div>
+
       </div>
     </section>
   )
