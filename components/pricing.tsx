@@ -5,12 +5,12 @@ import { Check, ArrowRight } from "lucide-react"
 import { AnimateIn } from "@/components/animate-in"
 
 const included = [
-  "Monthly home check-ins",
-  "Quarterly walk-throughs",
-  "Yearly full inspections",
-  "24/7 access to your Home Advisor",
-  "Vendor coordination — we make the calls",
-  "Digital home records & documentation",
+  "Proactive Check-Ins",
+  "Quarterly Property Reviews",
+  "Annual Comprehensive Inspection",
+  "Dedicated Property Advisor — 24/7",
+  "Full vendor and contractor coordination",
+  "Complete home profile and service history",
 ]
 
 const examples = [
@@ -71,7 +71,7 @@ export function Pricing() {
           {/* Included in every subscription */}
           <AnimateIn delay={120}>
             <div className="p-8 rounded-lg border border-border bg-card">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Included in every subscription</p>
+              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Included in every membership</p>
               <ul className="mt-6 space-y-4">
                 {included.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -83,7 +83,7 @@ export function Pricing() {
                 ))}
               </ul>
               <p className="mt-8 text-sm text-muted-foreground border-t border-border pt-6">
-                One number to call. One team that knows your home. We are the call — for maintenance, repairs, inspections, and everything in between.
+                Your home has one point of contact. One team that knows it, tracks it, and manages everything it needs — before and after problems arise.
               </p>
             </div>
           </AnimateIn>
